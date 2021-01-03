@@ -1,0 +1,40 @@
+*,
+*::after,
+*::before {
+   box-sizing: border-box;
+}
+
+.contenedor {
+   background-color: #313131;
+   margin-top: 2rem;
+   height: 20vh;
+   /* flex */
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: flex-start;
+}
+
+.item {
+   background-color: #e1e1e1;
+   margin: 0.2rem;
+   padding: 0.1rem;
+   /* flex */
+   flex-grow: 0; /* 0 LA CAJA tenga espacio sobrante crece*/
+   flex-shrink: 1; /* 1 LA CAJA puede disminuir*/
+   flex-basis: auto; /* auto*/
+   order: 0;
+   align-self: stretch;
+}
+
+.item:nth-child(2) {
+   /* flex-grow: 0;  */
+   /* flex-shrink: 2; */
+   order: 1;
+}
+
+.item:nth-child(3) {
+   /* flex-grow: 0;  */
+   /* flex-shrink: 2; */
+   order: 0;
+   align-self: center;
+}

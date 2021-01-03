@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Ejemplos prácticos Flexbox</title>
+      <style>
+         *,
+         *::after,
+         *::before {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+         }
+         body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+         }
+         img {
+            max-width:: 100%;
+            height: auto;
+         }
+         main {
+            flex-grow: 1;
+         }
+         .titulares {
+            padding: 1rem;
+            background-color: #222;
+            color: #fff;
+         }
+
+         .header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+         }
+
+         .hero-image {
+            min-height: 100vh;
+            background-image: url("https://placeimg.com/1280/720/any");
+            background-repeat: no-repeat;
+            background-size: cover;
+         }
+
+         .hero-image div {
+            min-height: inherit;
+            background-color: rgba(0, 0, 0, 0.75);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+         }
+         .hero-image div h1 {
+            font-size: 5vw;
+            color: #fff;
+         }
+
+         .menu ul {
+            list-style-type: none;
+         }
+
+         .flex-responsive {
+            display: flex;
+            flex-flow: row wrap;
+         }
+
+         .flex-responsive-item {
+            border: 1px solid #ff6600 ;
+            flex: 1 1 200px;
+         }
+         @media (min-width: 1200px) {
+            .header {
+               display: flex;
+               flex-direction: row;
+               justify-content: space-between;
+            }
+
+            .menu ul {
+               display: flex;
+            }
+
+            .menu li {
+               padding: 0.5rem;
+            }
+
+            .flex-container {
+               display: flex;
+               align-items: center;
+            }
+
+            .flex-item {
+               flex: 0 0 50%;
+            }
+
+            .flex-order-1 {
+               order: 1;
+            }
+         }
+      </style>
+   </head>
+   <body>
+      <header class="titulares header">
+         <div class="logo">Logo</div>
+         <nav class="menu">
+            <ul>
+               <li><a href="">Seccion 1</a></li>
+               <li><a href="">Seccion 2</a></li>
+               <li><a href="">Seccion 3</a></li>
+               <li><a href="">Seccion 4</a></li>
+            </ul>
+         </nav>
+      </header>
+      <main>
+         <article class="hero-image">
+            <div>
+               <h1>Flexbox is f cool</h1>
+            </div>
+         </article>
+         <section class="flex-container">
+            <article class="flex-item">
+               <h2>Título</h2>
+               <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Culpa a, nemo iste cumque reprehenderit maxime necessitatibus,
+                  perferendis blanditiis inventore veritatis officia aut. Quidem
+                  voluptate repudiandae doloremque fugiat ratione consectetur
+                  est.
+               </p>
+            </article>
+            <article class="flex-item">
+               <img src="https://placeimg.com/400/400/people" alt="" />
+            </article>
+         </section>
+         <section class="flex-container">
+            <article class="flex-item flex-order-1">
+               <h2>Título</h2>
+               <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Culpa a, nemo iste cumque reprehenderit maxime necessitatibus,
+                  perferendis blanditiis inventore veritatis officia aut. Quidem
+                  voluptate repudiandae doloremque fugiat ratione consectetur
+                  est.
+               </p>
+            </article>
+            <article class="flex-item">
+               <img src="https://placeimg.com/400/400/arch" alt="" />
+            </article>
+         </section>
+         <h2>Responsive sin media query</h2>
+         <section class="flex-responsive">
+            <article class="flex-responsive-item">Item responsivo 1</article>
+            <article class="flex-responsive-item">Item responsivo 2</article>
+            <article class="flex-responsive-item">Item responsivo 3</article>
+            <article class="flex-responsive-item">Item responsivo 4</article>
+            <article class="flex-responsive-item">Item responsivo 5</article>
+            <article class="flex-responsive-item">Item responsivo 6</article>
+            <article class="flex-responsive-item">Item responsivo 7</article>
+            <article class="flex-responsive-item">Item responsivo 8</article>
+            <article class="flex-responsive-item">Item responsivo 9</article>
+            <article class="flex-responsive-item">Item responsivo 10</article>
+            <article class="flex-responsive-item">Item responsivo 11</article>
+            <article class="flex-responsive-item">Item responsivo 12</article>
+            <article class="flex-responsive-item">Item responsivo 13</article>
+            <article class="flex-responsive-item">Item responsivo 14</article>
+            <article class="flex-responsive-item">Item responsivo 15</article>
+            <article class="flex-responsive-item">Item responsivo 16</article>
+            <article class="flex-responsive-item">Item responsivo 17</article>
+            <article class="flex-responsive-item">Item responsivo 18</article>
+            <article class="flex-responsive-item">Item responsivo 19</article>
+         </section>
+      </main>
+      <footer class="titulares">
+         <h2>Sticky Footer</h2>
+      </footer>
+   </body>
+</html>
